@@ -10,21 +10,24 @@
     
 </head>
 <body>
-    <div class="h-[100vh] flex justify-center items-center">
-        <div class="h-[280px] w-[350px] bg-cyan-100 shadow-xl border-solid border-[5px] rounded-3xl">
-            <h3 class="text-center mt-2.5 text-[18px]">Login</h3>
+    <div class="h-screen flex flex-col justify-center items-center">
+        <div class="w-80 bg-cyan-100 shadow-xl border-solid border-[5px] rounded-3xl">
+            <h3 class="text-center mt-2.5 text-xl font-semibold">Login</h3>
             <hr class="bg-black">
-            <form class="px-4 py-3 flex flex-col justify-around h-[85%]"id="form">
-                <div>
+            <form class="px-4 py-3 flex flex-col gap-y-4 "id="form">
+                <div class="space-y-2">
                 <label for="email">Email</label><br>
-                <input type="text"id="email" placeholder="Enter a valid email"class="w-[100%] mt-[4px] outline-none rounded-md" required>
-                <P id="emailerr" class="text-[10px] text-red-500"><i class="fa-solid fa-circle-info"></i></P>
+                <input type="text"id="email" placeholder="Enter a valid email"class="w-[100%] p-2 outline-none rounded-md" required>
+                <div id="emailerr" class="flex items-center justify-start gap-x-2 hidden  text-red-500 "><i class="fa-solid fa-circle-info"></i>
+                    <P  class="text-[10px]">Try using the format yourname@gmail.com</P>
+                </div>
             </div>
-            <div>
+            <div class="space-y-2">
                 <label for="password">Password</label><br>
-                <input type="password" id="Password" placeholder="Enter your password" class="w-full mt-[4px] outline-none rounded-md" required>
-                <P id="passworderr" class="text-[10px] text-red-500"><i class="fa-solid fa-circle-info"></i></P>
-            </div>
+                <input type="password" id="Password" placeholder="Enter your password" class="w-full p-2 outline-none rounded-md" required>
+                <div id="passworderr" class="flex items-center justify-start gap-x-2 hidden text-red-500  "><i class="fa-solid fa-circle-info"></i>
+                    <P  class="text-[10px]">Min 8 chars,1 upper,1 lower,1 digit,1 symbol required</P>
+                </div>            </div>
                 <div class="text-center">
                     <button class="bg-green-400 w-[30%] py-1 rounded-2xl"> <i class="fa-duotone fa-solid fa-right-to-bracket"></i> Login</button>
                 </div>

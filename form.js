@@ -22,21 +22,39 @@ function advancevalidation(email,password){
     const emailregex = /^\S+@\S+\.\S+$/;
 
     if(email.match(emailregex)){
+
         console.log("passed");
+        emailerr.classList.add("hidden");
+        // emailerr.classList.remove("flex");
+        //emailerr.classList.replace("flex","hidden");
         
     }else{
         console.log("failed");
-        emailerr.textContent="Try using the format yourname@gmail.com";
+        emailerr.classList.remove("hidden");
+        // emailerr.classList.add("flex");
+        // emailerr.classList.replace("hidden","flex");
+
+
     };
 
     const passwordregex =  /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/;
 
     if(password.match(passwordregex)){
+
         console.log("passed");
+        passworderr.classList.add("hidden");
+        // passworderr.classList.remove("flex");
+        // passworderr.classList.replace("flex","hidden");
+        
+
         
     }else{
-        console.log("failed");
-        passworderr.textContent="Min 8 chars,1 upper,1 lower,1 digit,1 symbol required";
+         console.log("failed");     
+        passworderr.classList.remove("hidden");
+        // passworderr.classList.add("flex");
+        // passworderr.classList.replace("hidden","flex");
+
+
     };
 
 };
