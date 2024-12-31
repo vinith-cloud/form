@@ -53,8 +53,9 @@ function advancevalidation(email,password){
         passworderr.classList.remove("hidden");
         // passworderr.classList.add("flex");
         // passworderr.classList.replace("hidden","flex");
+        }
 
-
+        
     };
 
-};
+
